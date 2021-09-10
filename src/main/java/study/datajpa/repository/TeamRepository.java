@@ -1,7 +1,7 @@
 package study.datajpa.repository;
 
-import com.dokitlist.dooyaho.study.entity.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
+import study.datajpa.entity.Team;
 
 public interface TeamRepository extends JpaRepository<Team, Long> {
 

@@ -1,9 +1,9 @@
 package study.datajpa.repository;
 
-import com.dokitlist.dooyaho.study.entity.Member2;
 import java.util.List;
+import study.datajpa.entity.Member;
 
 public interface MemberRepositoryCustom {
 
-    List<Member2> findMemberCustom();
+    List<Member> findMemberCustom();
 }

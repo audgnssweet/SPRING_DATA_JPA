@@ -16,7 +16,7 @@ import lombok.ToString;
 @Getter
 @Table(name = "MEMBER")
 @Entity
-public class Member2 extends BaseEntity{
+public class Member extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,9 +33,9 @@ public class Member2 extends BaseEntity{
     @JoinColumn(name = "TEAM_ID")
     private Team team;
 
-    protected Member2() {}
+    protected Member() {}
 
-    public Member2(String username, int age, Team team) {
+    public Member(String username, int age, Team team) {
         this.username = username;
         this.age = age;
         if (team != null) {
@@ -45,7 +45,7 @@ public class Member2 extends BaseEntity{
 
     public void changeTeam(Team team) {
         this.team = team;
-        team.getMember2s().add(this);
+        team.getMembers().add(this);
     }
 
 }
