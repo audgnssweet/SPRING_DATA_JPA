@@ -9,7 +9,7 @@ import lombok.Getter;
 
 @Getter
 @MappedSuperclass
-public class JpaBaseEntity {
+public abstract class JpaBaseEntity {
 
     @Column(updatable = false)
     private LocalDateTime createdDate;
